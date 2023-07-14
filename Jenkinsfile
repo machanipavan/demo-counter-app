@@ -12,6 +12,7 @@ pipeline{
                     git branch: 'main', url: 'https://github.com/machanipavan/demo-counter-app.git'
                     }
                 }
+            }
 
                 stage('unit testing')
                     
