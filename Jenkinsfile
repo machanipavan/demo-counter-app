@@ -1,27 +1,28 @@
 pipeline{
+    
+    agent any 
+    
+    stages {
         
-        agent any 
-        
-        stages {
+        stage('Git Checkout'){
             
-            stage('Git Checkout'){
+            steps{
                 
-                steps{
-                    
-                    script{
-                    git branch: 'main', url: 'https://github.com/machanipavan/demo-counter-app.git'
-                    }
+                script{
+                  git branch: 'main', credentialsId: 'nani', url: 'https://github.com/sushmireddy05/demo-counter-app.git'
                 }
             }
-
-                stage('unit testing')
-                    
-                    {
-                        sh'mvn test'
-                    }
+        }
+      
+        stage('UNIT testing'){
+            
+            steps{
                 
+                script{
+                    
+                    sh 'mvn test'
+                }
             }
-        
         }
     }
-    
+}
