@@ -1,19 +1,19 @@
 
-pipeline{
-    
-    agent any 
-    
-    stages {
+    pipeline{
         
-        stage('Git Checkout'){
+        agent any 
+        
+        stages {
             
-            steps{
+            stage('Git Checkout'){
                 
-                script{
-                  git branch: 'main', url: 'https://github.com/machanipavan/demo-counter-app.git'
+                steps{
+                    
+                    script{
+                    git branch: 'main', url: 'https://github.com/machanipavan/demo-counter-app.git'
+                    }
                 }
             }
+        
         }
-      
     }
-}
