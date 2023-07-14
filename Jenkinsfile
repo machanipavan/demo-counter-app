@@ -9,7 +9,7 @@ pipeline{
             steps{
                 
                 script{
-                  git branch: 'main', credentialsId: 'nani', url: 'https://github.com/sushmireddy05/demo-counter-app.git'
+                  git branch: 'main', url: 'https://github.com/machanipavan/demo-counter-app.git'
                 }
             }
         }
